@@ -3,8 +3,8 @@
 describe('Register user', () => {
 
 
-    it('Realizar o cadastro de usuário', () => {
-        cy.visit('http://lojaebac.ebaconline.art.br/')
+    it.only('Realizar o cadastro de usuário', () => {
+        cy.visit('/')
 
         cy.get('.icon-user-unfollow').click()
 
@@ -40,7 +40,7 @@ describe('Register user', () => {
 
     })
 
-    it.only('Mensagem de dica para criação de senha', () => {
+    it('Mensagem de dica para criação de senha', () => {
         cy.visit('http://lojaebac.ebaconline.art.br/')
 
         cy.get('.icon-user-unfollow').click()
@@ -51,6 +51,7 @@ describe('Register user', () => {
         cy.contains('Dica: A senha deve ter pelo menos doze caracteres. Para torná-la mais forte, use letras maiúsculas e minúsculas, números e símbolos como ! " ? $ % ^ & ).')
 
     })
+
 
 
 })
