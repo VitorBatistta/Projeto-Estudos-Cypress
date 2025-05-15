@@ -8,8 +8,10 @@ describe('Register user', () => {
 
         cy.get('.icon-user-unfollow').click()
 
-        cy.get('#reg_email').type('vitor@email.com')
+        cy.get('#reg_email').type('vitor2@email.com')
         cy.get('#reg_password').type('Teste*12345678')
+
+        //cy.get(':nth-child(4) > .button').click()
 
     })
     it('Mensagem de erro campo email', () => {
@@ -32,7 +34,7 @@ describe('Register user', () => {
         cy.get('.icon-user-unfollow').click()
 
         
-        cy.get('#reg_email').type('vitor@email.com')
+        cy.get('#reg_email').type('vitorteste@email.com')
 
         cy.get(':nth-child(4) > .button').click()
 
