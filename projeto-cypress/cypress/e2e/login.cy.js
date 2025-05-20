@@ -3,7 +3,7 @@
 describe('Login', () => {
 
 
-    it('Realizar login no sistema', () => {
+    it.only('Realizar login no sistema', () => {
         cy.visit('/')
 
         cy.get('.icon-user-unfollow').click()
@@ -12,6 +12,8 @@ describe('Login', () => {
         cy.get('#password').type('Teste*12345678')
 
         cy.get('.woocommerce-form > .button').click()
+
+        cy.contains('A partir do painel de controle de sua conta, você pode ver suas compras recentes, gerenciar seus endereços de entrega e faturamento, e editar sua senha e detalhes da conta.')
 
     })
     it('Erro login sem senha', () => {
